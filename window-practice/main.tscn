@@ -1,43 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://ct1bwtfjqoga2"]
+[gd_scene load_steps=3 format=3 uid="uid://ct1bwtfjqoga2"]
 
+[ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://wwiiqqdjxxpk" path="res://main.gd" id="1_h2yge"]
-[ext_resource type="Theme" uid="uid://cbu701eo6j6jo" path="res://Themes/Modern11/Modern11.tres" id="1_lquwl"]
-[ext_resource type="Texture2D" uid="uid://bexk8wesjcjk" path="res://icon.svg" id="2_1bvp3"]
-[ext_resource type="Script" uid="uid://ra1bcw76km8s" path="res://view_window.gd" id="3_lquwl"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-theme = ExtResource("1_lquwl")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0xm2m")
 script = ExtResource("1_h2yge")
-
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.36833334
-anchor_bottom = 0.49396297
-offset_right = -0.3199997
-offset_bottom = 19.911999
-metadata/_edit_use_anchors_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(200, 200)
-texture = ExtResource("2_1bvp3")
-
-[node name="Window" type="Window" parent="."]
-oversampling_override = 1.0
-position = Vector2i(500, 500)
-visible = false
-script = ExtResource("3_lquwl")
-
-[node name="Camera2D" type="Camera2D" parent="Window"]
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 513.0
-offset_top = 264.0
-offset_right = 627.0
-offset_bottom = 295.0
-text = "New Window!"
