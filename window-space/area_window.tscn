@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu2o5llywjm44"]
+
+[ext_resource type="Script" uid="uid://blkvc047ynnr7" path="res://area_window.gd" id="1_1yf5y"]
+[ext_resource type="PackedScene" uid="uid://dcp34jwh71axt" path="res://border_window.tscn" id="2_jhsb1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ci67h"]
+size = Vector2(500, 500)
+
+[node name="Node" type="Node"]
+script = ExtResource("1_1yf5y")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(350, 350)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ci67h")
+
+[node name="Window" parent="." instance=ExtResource("2_jhsb1")]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

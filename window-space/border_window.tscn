@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcp34jwh71axt"]
+
+[ext_resource type="Script" uid="uid://k1bk4xjphv1v" path="res://resizeable.gd" id="1_4daeo"]
+[ext_resource type="PackedScene" uid="uid://ce20fxl00132h" path="res://player.tscn" id="2_ckw17"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_r5bmm"]
+b = Vector2(500, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ckw17"]
+a = Vector2(0, 500)
+b = Vector2(500, 500)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4daeo"]
+b = Vector2(0, 500)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_f0d0f"]
+a = Vector2(500, 0)
+b = Vector2(500, 500)
+
+[node name="Window" type="Window"]
+oversampling_override = 1.0
+position = Vector2i(100, 100)
+size = Vector2i(500, 500)
+script = ExtResource("1_4daeo")
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+
+[node name="Top" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_r5bmm")
+
+[node name="Down" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_ckw17")
+disabled = true
+
+[node name="Left" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_4daeo")
+
+[node name="Right" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_f0d0f")
+
+[node name="player" parent="." instance=ExtResource("2_ckw17")]
+position = Vector2(100, 100)
+
+[connection signal="size_changed" from="." to="." method="_on_size_changed"]
