@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4mejalforxv3"]
+
+[ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://ovgp875imlvk" path="res://broken img.jpg" id="2_0xm2m"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ig7tw")
+
+[node name="Turret" type="Window" parent="."]
+transparent_bg = true
+oversampling_override = 1.0
+position = Vector2i(200, 500)
+transparent = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Turret"]
+position = Vector2(50, 45.000015)
+scale = Vector2(0.16202092, 0.16202095)
+texture = ExtResource("2_0xm2m")
+
+[node name="Enemy" type="Window" parent="."]
+transparent_bg = true
+oversampling_override = 1.0
+position = Vector2i(200, 500)
+transparent = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
+position = Vector2(50, 45.000015)
+scale = Vector2(0.16202092, 0.16202095)
+texture = ExtResource("2_0xm2m")
