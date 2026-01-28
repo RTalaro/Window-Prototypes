@@ -211,6 +211,7 @@ offset_bottom = 260.0
 text = "Multiline text edit control.
 But unfortunatly it's read-only.
 So you cannot edit it."
+editable = false
 
 [node name="SpinBox" type="SpinBox" parent="Control/TabContainer/Editors"]
 layout_mode = 0

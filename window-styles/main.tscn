@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ct1bwtfjqoga2"]
 
-[ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_0xm2m"]
+[ext_resource type="Theme" uid="uid://2nc45nwl5pqg" path="res://Themes/windows_10_dark/theme.tres" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://wwiiqqdjxxpk" path="res://main.gd" id="1_h2yge"]
 
 [node name="Main" type="Control"]

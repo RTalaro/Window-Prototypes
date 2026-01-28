@@ -2,7 +2,7 @@
 
 **Modern11** is broken, **Classic311** is only missing the title bar (quick fix), and **Classic95** is ready for use.<br>
 **Windows95** and **Windows98** have broken assets.<br>
-windows_10_light and windows_10_dark are dependent on one another. **windows_10_light** needs the right color palette, a border, and a titlebar. **windows_10_dark** only needs a border and title bar set.<br>
+windows_10_light and windows_10_dark are dependent on one another. **windows_10_light** needs the right color palette, a border, and a titlebar. **windows_10_dark** only needs its close icon fixed, then it will be ready for use.<br>
 
 As of now, a Mac Theme is nowhere in sight so we probably just have to recreate it.
 
