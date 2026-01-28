@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4mejalforxv3"]
+[gd_scene load_steps=5 format=3 uid="uid://c4mejalforxv3"]
 
 [ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_ig7tw"]
-[ext_resource type="Texture2D" uid="uid://ovgp875imlvk" path="res://broken img.jpg" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://bnfhtri2iyccs" path="res://main.gd" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://c8g2y17kj4w1l" path="res://turret.tscn" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://dk4at05oxu3mc" path="res://angry.png" id="3_h2yge"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -11,25 +13,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_ig7tw")
+script = ExtResource("2_1bvp3")
+metadata/_edit_lock_ = true
 
 [node name="Turret" type="Window" parent="."]
 transparent_bg = true
 oversampling_override = 1.0
-position = Vector2i(200, 500)
+position = Vector2i(100, 100)
+size = Vector2i(500, 500)
+exclusive = true
+unresizable = true
 transparent = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Turret"]
-position = Vector2(50, 45.000015)
-scale = Vector2(0.16202092, 0.16202095)
-texture = ExtResource("2_0xm2m")
+[node name="Turret" parent="Turret" instance=ExtResource("2_h2yge")]
+position = Vector2(254, 246)
 
 [node name="Enemy" type="Window" parent="."]
 transparent_bg = true
 oversampling_override = 1.0
-position = Vector2i(200, 500)
+position = Vector2i(700, 200)
+exclusive = true
 transparent = true
+minimize_disabled = true
+maximize_disabled = true
+content_scale_aspect = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemy"]
 position = Vector2(50, 45.000015)
 scale = Vector2(0.16202092, 0.16202095)
-texture = ExtResource("2_0xm2m")
+texture = ExtResource("3_h2yge")
