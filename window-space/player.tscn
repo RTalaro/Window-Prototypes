@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://pa06j2ddbv6q" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://cgg4d47p515ox" path="res://icon.svg" id="2_onrkg"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
-radius = 66.48308
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
+size = Vector2(100, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
 size = Vector2(100, 100)
@@ -16,7 +16,7 @@ script = ExtResource("1_4flbx")
 texture = ExtResource("2_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_onrkg")
+shape = SubResource("RectangleShape2D_i3pqv")
 
 [node name="Area2D" type="Area2D" parent="."]
 

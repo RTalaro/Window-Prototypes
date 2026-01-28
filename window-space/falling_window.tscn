@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctfx3ppehsek7"]
+
+[ext_resource type="Script" uid="uid://bav4jhvguvdob" path="res://falling_window.gd" id="1_5sxwx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5sxwx"]
+size = Vector2(100, 100)
+
+[node name="Node" type="Node"]
+script = ExtResource("1_5sxwx")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(150, 150)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_5sxwx")
+
+[node name="Window" type="Window" parent="."]
+oversampling_override = 1.0
+position = Vector2i(100, 100)

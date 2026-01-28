@@ -1,9 +1,10 @@
 extends Window
 
-@onready var top: CollisionShape2D = $Area2D/Top
-@onready var down: CollisionShape2D = $Area2D/Down
-@onready var left: CollisionShape2D = $Area2D/Left
-@onready var right: CollisionShape2D = $Area2D/Right
+@onready var top: CollisionShape2D = $StaticBody2D/Top
+@onready var down: CollisionShape2D = $StaticBody2D/Down
+@onready var left: CollisionShape2D = $StaticBody2D/Left
+@onready var right: CollisionShape2D = $StaticBody2D/Right
+
 
 
 func _on_size_changed() -> void:

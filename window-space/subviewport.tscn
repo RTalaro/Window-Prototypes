@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs2fmi4xsxap1"]
+
+[ext_resource type="Script" uid="uid://o7dmqpv1wa4i" path="res://subviewport.gd" id="1_5ah6c"]
+[ext_resource type="Texture2D" uid="uid://cgg4d47p515ox" path="res://icon.svg" id="2_l0fjo"]
+
+[node name="Node" type="Node"]
+
+[node name="Window2" type="Window" parent="."]
+oversampling_override = 1.0
+position = Vector2i(100, 100)
+size = Vector2i(400, 400)
+script = ExtResource("1_5ah6c")
+
+[node name="Sprite2D" type="Sprite2D" parent="Window2"]
+visible = false
+texture = ExtResource("2_l0fjo")
+
+[node name="Camera2D" type="Camera2D" parent="Window2"]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+physics_object_picking = true
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewport"]
+position = Vector2(200, 200)
+texture = ExtResource("2_l0fjo")
+
+[node name="Window3" type="Window" parent="."]
+oversampling_override = 1.0
+position = Vector2i(100, 100)
+size = Vector2i(400, 400)
+script = ExtResource("1_5ah6c")
+
+[node name="Sprite2D" type="Sprite2D" parent="Window3"]
+visible = false
+texture = ExtResource("2_l0fjo")
+
+[node name="Camera2D" type="Camera2D" parent="Window3"]

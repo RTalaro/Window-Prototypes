@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvpyp8nnrd326"]
+
+[ext_resource type="Script" uid="uid://cpshnqlnc4tgf" path="res://pulsing_window.gd" id="1_3kv3h"]
+
+[node name="Window" type="Window"]
+oversampling_override = 1.0
+script = ExtResource("1_3kv3h")

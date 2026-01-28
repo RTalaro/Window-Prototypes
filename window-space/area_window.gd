@@ -8,7 +8,10 @@ func _ready() -> void:
 	collision_shape_2d.shape.set_size(window.size)
 	area_2d.position = Vector2(window.position)
 	area_2d.position += Vector2(window.size / 2)
-	
+
+func _physics_process(_delta: float) -> void: # If facing performance issues, don't call this every frame
+	area_2d.position = Vector2(window.position)
+	area_2d.position += Vector2(window.size / 2)
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("area entered")

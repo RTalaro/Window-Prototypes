@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dej51xm5roph5"]
+
+[ext_resource type="Script" uid="uid://6c737sspbei5" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://drfc2ost1kfqj" path="res://click_gun.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://o7dmqpv1wa4i" path="res://subviewport.gd" id="2_0xm2m"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_h2yge")
+
+[node name="Window" type="Window" parent="."]
+oversampling_override = 1.0
+position = Vector2i(100, 100)
+script = ExtResource("2_0xm2m")
+
+[node name="Camera2D" type="Camera2D" parent="Window"]
+
+[node name="Window2" type="Window" parent="."]
+oversampling_override = 1.0
+position = Vector2i(100, 100)
+script = ExtResource("2_0xm2m")
+
+[node name="Camera2D" type="Camera2D" parent="Window2"]
+
+[node name="ClickGun" parent="." instance=ExtResource("1_ig7tw")]

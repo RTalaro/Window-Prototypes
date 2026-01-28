@@ -23,19 +23,18 @@ position = Vector2i(100, 100)
 size = Vector2i(500, 500)
 script = ExtResource("1_4daeo")
 
-[node name="Area2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="Top" type="CollisionShape2D" parent="Area2D"]
+[node name="Top" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("SegmentShape2D_r5bmm")
 
-[node name="Down" type="CollisionShape2D" parent="Area2D"]
+[node name="Down" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("SegmentShape2D_ckw17")
-disabled = true
 
-[node name="Left" type="CollisionShape2D" parent="Area2D"]
+[node name="Left" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("SegmentShape2D_4daeo")
 
-[node name="Right" type="CollisionShape2D" parent="Area2D"]
+[node name="Right" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("SegmentShape2D_f0d0f")
 
 [node name="player" parent="." instance=ExtResource("2_ckw17")]

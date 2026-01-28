@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://drfc2ost1kfqj"]
+
+[ext_resource type="Script" uid="uid://b1twk87tjg5tv" path="res://click_gun.gd" id="1_3uspv"]
+
+[node name="ClickGun" type="Node2D"]
+script = ExtResource("1_3uspv")
