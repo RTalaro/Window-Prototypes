@@ -1,22 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://doegc3qtuxpbi"]
+[gd_scene load_steps=7 format=3 uid="uid://doegc3qtuxpbi"]
 
 [ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_ig7tw"]
-
-[sub_resource type="Animation" id="Animation_ig7tw"]
-resource_name = "move right"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Window:size:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(0.2030631, 4.000005),
-"update": 0,
-"values": [400, 100]
-}
 
 [sub_resource type="Animation" id="Animation_0xm2m"]
 length = 0.001
@@ -60,8 +44,42 @@ tracks/0/keys = {
 "values": [Vector2i(0, 0), Vector2i(100, 200)]
 }
 
+[sub_resource type="Animation" id="Animation_ig7tw"]
+resource_name = "move right"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Window:size:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(0.2030631, 4.000005),
+"update": 0,
+"values": [400, 100]
+}
+
+[sub_resource type="Animation" id="Animation_1bvp3"]
+resource_name = "Move Up"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Window:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.1666666, 1.7666667, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2i(250, 250), Vector2i(300, 300), Vector2i(350, 250), Vector2i(300, 200), Vector2i(250, 250)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1bvp3"]
 _data = {
+&"Move Up": SubResource("Animation_1bvp3"),
 &"RESET": SubResource("Animation_0xm2m"),
 &"change pos": SubResource("Animation_h2yge"),
 &"move right": SubResource("Animation_ig7tw")
