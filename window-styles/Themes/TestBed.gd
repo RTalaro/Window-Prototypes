@@ -8,7 +8,11 @@ var themes = {
 	0: ThemeItem.new("Default", "."),
 	1: ThemeItem.new("Classic 3.11", "res://Themes/Classic311/Classic311.tres"),
 	2: ThemeItem.new("Classic 95", "res://Themes/Classic95/Classic95.tres"),
-	3: ThemeItem.new("Modern 11 (WIP)", "res://Themes/Modern11/Modern11.tres")
+	3: ThemeItem.new("Modern 11 (WIP)", "res://Themes/Modern11/Modern11.tres"),
+	4: ThemeItem.new("Windows 10 Dark", "res://Themes/windows_10_dark/theme.tres"),
+	5: ThemeItem.new("Windows 10 Light", "res://Themes/windows_10_light/theme.tres"),
+	6: ThemeItem.new("Windows 95", "res://Themes/Windows95/Windows95.tres"),
+	7: ThemeItem.new("Windows 98", "res://Themes/Windows98/theme.tres")
 }
 
 func _ready():
