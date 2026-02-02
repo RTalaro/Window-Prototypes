@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bdfevk0dwyp8p"]
+[gd_scene load_steps=14 format=3 uid="uid://bdfevk0dwyp8p"]
 
 [ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://bellxoigsmgfj" path="res://main.gd" id="2_0xm2m"]
@@ -136,21 +136,17 @@ tracks/8/keys = {
 "update": 1,
 "values": [200]
 }
-
-[sub_resource type="Animation" id="Animation_7mycd"]
-resource_name = "grow map"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Map:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.36666667),
-"transitions": PackedFloat32Array(0.5, 0.5),
-"update": 0,
-"values": [Vector2i(50, 0), Vector2i(500, 300)]
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CenteredWindow:size")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(100, 100)]
 }
 
 [sub_resource type="Animation" id="Animation_0xm2m"]
@@ -305,10 +301,55 @@ tracks/7/keys = {
 "update": 0,
 "values": [100, 200]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CenteredWindow:size")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.6, 1.4333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2i(100, 100), Vector2i(200, 100)]
+}
+
+[sub_resource type="Animation" id="Animation_7mycd"]
+resource_name = "grow map"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Map:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.36666667),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2i(50, 0), Vector2i(500, 300)]
+}
+
+[sub_resource type="Animation" id="Animation_lquwl"]
+resource_name = "centered growth"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenteredWindow:size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.13333333, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2i(151, 100), Vector2i(200, 100)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1bvp3"]
 _data = {
 &"RESET": SubResource("Animation_h2yge"),
+&"centered growth": SubResource("Animation_lquwl"),
 &"close menu": SubResource("Animation_0xm2m"),
 &"floating menu": SubResource("Animation_1bvp3"),
 &"grow map": SubResource("Animation_7mycd")
@@ -408,7 +449,7 @@ text = "PLAY"
 [node name="Options" type="Window" parent="Menu"]
 transparent_bg = true
 oversampling_override = 1.0
-position = Vector2i(588, 200)
+position = Vector2i(600, 200)
 transient = true
 transparent = true
 
@@ -446,3 +487,9 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "QUIT"
+
+[node name="CenteredWindow" type="Window" parent="."]
+transparent_bg = true
+oversampling_override = 1.0
+initial_position = 1
+transparent = true

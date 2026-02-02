@@ -1,16 +1,19 @@
 extends Control
 
 
-@onready var menu = $Menu
-@onready var title = $Menu/Title
-@onready var play = $Menu/Play/Button
-@onready var options = $Menu/Options/Button
-@onready var quit = $Menu/Quit/Button
+@onready var menu: Control = $Menu
+@onready var title: Window = $Menu/Title
+@onready var play: Window = $Menu/Play
+@onready var play_button: Button = $Menu/Play/Button
+@onready var options: Window = $Menu/Options
+@onready var options_button: Button = $Menu/Options/Button
+@onready var quit: Window = $Menu/Quit
+@onready var quit_button: Button = $Menu/Quit/Button
 
-@onready var anim = $AnimationPlayer
-@onready var timer = $Timer
+@onready var anim: AnimationPlayer = $AnimationPlayer
+@onready var timer: Timer = $Timer
 
-@onready var map = $Map
+@onready var map: Window = $Map
 
 func _ready():
 	#var some_size = Vector2i(1000, 700)
@@ -20,14 +23,10 @@ func _ready():
 	#print(screen_size)
 	#get_viewport().size = Vector2i(screen_size)
 	
-	check_OS()
+	set_window_theme()
+	handle_signals()
 	
-	#map.visible = false
-	#title.size = Vector2i(300,200)
-	title.connect("close_requested", close_game)
-	play.connect("button_up", on_play)
-	quit.connect("button_up", close_game)
-	
+	map.visible = false
 	anim.play("floating menu")
 
 
@@ -51,7 +50,7 @@ func close_game():
 	# TO-DO: uncomment when done
 	get_tree().quit()
 
-func check_OS():
+func set_window_theme():
 	var user_os = OS.get_name()
 	if user_os == "Windows":
 		theme = load("res://Themes/Modern11/Modern11.tres")
@@ -60,3 +59,8 @@ func check_OS():
 		# set Theme for Mac
 		#theme = load()
 		pass
+
+func handle_signals():
+	title.connect("close_requested", close_game)
+	play_button.connect("button_up", on_play)
+	quit_button.connect("button_up", close_game)
