@@ -27,6 +27,8 @@ func _ready():
 	title.connect("close_requested", close_game)
 	play.connect("button_up", on_play)
 	quit.connect("button_up", close_game)
+	
+	anim.play("floating menu")
 
 
 

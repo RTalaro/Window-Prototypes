@@ -325,6 +325,7 @@ theme = ExtResource("1_h2yge")
 script = ExtResource("2_0xm2m")
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
 tree_root = SubResource("AnimationNodeBlendTree_7mycd")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Blend2/blend_amount = 0.0
@@ -396,7 +397,7 @@ text = "PLAY"
 [node name="Options" type="Window" parent="Menu"]
 transparent_bg = true
 oversampling_override = 1.0
-position = Vector2i(555, 200)
+position = Vector2i(588, 200)
 transient = true
 transparent = true
 
