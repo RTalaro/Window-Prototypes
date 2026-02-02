@@ -33,7 +33,7 @@ func _ready():
 
 
 func on_play():
-	anim.play("grow then minimize")
+	anim.play("close menu")
 	await anim.animation_finished
 	menu.queue_free()
 	
