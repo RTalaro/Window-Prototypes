@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bdfevk0dwyp8p"]
+[gd_scene load_steps=15 format=3 uid="uid://bdfevk0dwyp8p"]
 
 [ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://bellxoigsmgfj" path="res://main.gd" id="2_0xm2m"]
@@ -148,6 +148,58 @@ tracks/9/keys = {
 "update": 1,
 "values": [Vector2i(100, 100)]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Menu/Play:size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(100, 100)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Menu/Quit:size")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(100, 100)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Menu/Options:size")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(100, 100)]
+}
+
+[sub_resource type="Animation" id="Animation_lquwl"]
+resource_name = "centered growth"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenteredWindow:size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.13333333, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2i(151, 100), Vector2i(200, 100)]
+}
 
 [sub_resource type="Animation" id="Animation_0xm2m"]
 resource_name = "close menu"
@@ -162,7 +214,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2i(100, 100), Vector2i(0, 0)]
+"values": [Vector2i(100, 100), Vector2i(50, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -174,7 +226,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2i(100, 100), Vector2i(0, 0)]
+"values": [Vector2i(100, 100), Vector2i(50, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -186,7 +238,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2i(100, 100), Vector2i(0, 0)]
+"values": [Vector2i(100, 100), Vector2i(50, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -198,7 +250,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2i(100, 100), Vector2i(0, 0)]
+"values": [Vector2i(100, 100), Vector2i(50, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_1bvp3"]
@@ -327,23 +379,59 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.36666667),
 "transitions": PackedFloat32Array(0.5, 0.5),
 "update": 0,
-"values": [Vector2i(50, 0), Vector2i(500, 300)]
+"values": [Vector2i(100, 0), Vector2i(500, 300)]
 }
 
-[sub_resource type="Animation" id="Animation_lquwl"]
-resource_name = "centered growth"
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_5vw27"]
+resource_name = "start game"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CenteredWindow:size")
+tracks/0/path = NodePath("Menu/Title:size")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.13333333, 0.6),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2i(151, 100), Vector2i(200, 100)]
+"values": [Vector2i(100, 100), Vector2i(50, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Menu/Play:size")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 2.2191393, 1),
+"update": 0,
+"values": [Vector2i(100, 100), Vector2i(120, 120), Vector2i(50, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Menu/Options:size")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2i(100, 100), Vector2i(50, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Menu/Quit:size")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2i(100, 100), Vector2i(50, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1bvp3"]
@@ -352,7 +440,8 @@ _data = {
 &"centered growth": SubResource("Animation_lquwl"),
 &"close menu": SubResource("Animation_0xm2m"),
 &"floating menu": SubResource("Animation_1bvp3"),
-&"grow map": SubResource("Animation_7mycd")
+&"grow map": SubResource("Animation_7mycd"),
+&"start game": SubResource("Animation_5vw27")
 }
 
 [node name="Main" type="Control"]
@@ -381,7 +470,7 @@ libraries = {
 
 [node name="Map" type="Window" parent="."]
 oversampling_override = 1.0
-initial_position = 1
+position = Vector2i(326, 174)
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Map"]

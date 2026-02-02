@@ -32,7 +32,7 @@ func _ready():
 
 
 func on_play():
-	anim.play("close menu")
+	anim.play("start game")
 	await anim.animation_finished
 	menu.queue_free()
 	
