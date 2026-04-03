@@ -1,33 +1,63 @@
-[gd_scene load_steps=4 format=3 uid="uid://ct1bwtfjqoga2"]
+[gd_scene format=3 uid="uid://ct1bwtfjqoga2"]
 
-[ext_resource type="Theme" uid="uid://2nc45nwl5pqg" path="res://Themes/windows_10_dark/theme.tres" id="1_0xm2m"]
+[ext_resource type="Theme" uid="uid://2nc45nwl5pqg" path="res://Themes/Windows10_Dark/Windows10_Dark.tres" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://wwiiqqdjxxpk" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Theme" uid="uid://1urme6twc470" path="res://Themes/Windows10_Light/Windows10_Light.tres" id="3_7mycd"]
 [ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="3_h2yge"]
+[ext_resource type="Theme" uid="uid://cbu701eo6j6jo" path="res://Themes/Windows11/Windows11_Light.tres" id="4_1bvp3"]
+[ext_resource type="Theme" uid="uid://bk301vcd5qhse" path="res://Themes/Windows11/Windows11_Dark.tres" id="5_lquwl"]
 
-[node name="Main" type="Control"]
+[node name="Main" type="Control" unique_id=549135595]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_0xm2m")
+theme = ExtResource("3_7mycd")
 script = ExtResource("1_h2yge")
 
-[node name="Windows10" type="Window" parent="."]
+[node name="Windows11Light" type="Window" parent="." unique_id=1255573365]
 transparent_bg = true
 oversampling_override = 1.0
-title = "Windows 10 Sample"
-position = Vector2i(426, 224)
+title = "Windows 11 Light"
+position = Vector2i(0, 36)
 size = Vector2i(300, 200)
 transparent = true
-theme = ExtResource("1_0xm2m")
+theme = ExtResource("4_1bvp3")
 
-[node name="Windows95" type="Window" parent="."]
+[node name="Windows11Dark" type="Window" parent="." unique_id=1300130249]
 transparent_bg = true
 oversampling_override = 1.0
-title = "Windows 95 Sample"
-position = Vector2i(800, 224)
+title = "Windows 11 Dark"
+position = Vector2i(400, 36)
+size = Vector2i(300, 200)
+transparent = true
+theme = ExtResource("5_lquwl")
+
+[node name="Windows95" type="Window" parent="." unique_id=1834599847]
+transparent_bg = true
+oversampling_override = 1.0
+title = "Windows 95"
+position = Vector2i(800, 36)
 size = Vector2i(300, 200)
 transparent = true
 theme = ExtResource("3_h2yge")
+
+[node name="Windows10Light" type="Window" parent="." unique_id=1346710574]
+transparent_bg = true
+oversampling_override = 1.0
+title = "Windows 10 Light"
+position = Vector2i(0, 300)
+size = Vector2i(300, 200)
+transparent = true
+theme = ExtResource("3_7mycd")
+
+[node name="Windows10Dark" type="Window" parent="." unique_id=334838211]
+transparent_bg = true
+oversampling_override = 1.0
+title = "Windows 10 Dark"
+position = Vector2i(400, 300)
+size = Vector2i(300, 200)
+transparent = true
+theme = ExtResource("1_0xm2m")
